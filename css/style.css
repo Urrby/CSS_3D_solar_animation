@@ -1,0 +1,142 @@
+body {
+	background-color: #08090A;
+	background-image: url("http://www.independent-software.com/wp-content/uploads/2016/09/starfield.jpg");
+}
+
+#universe {
+	z-index: 1;
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	background-position: center 40%;
+	background-repeat: no-repeat;
+	background-size: cover; 
+	background-image: url("http://www.independent-software.com/wp-content/uploads/2016/09/flare-750x462.png");
+}
+
+#galaxy {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform: rotateX(75deg);
+	transform-style: preserve-3d;
+}
+
+#sun {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 1em;
+	height: 1em;
+	margin-top: -0.5em;
+	margin-left: -0.5em;
+	border-radius: 50%;
+	transform-style: preserve-3d;
+}
+
+#sun {
+	background-color: #FB7209;
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow: 0 0 60px rgba(255, 160, 60, 0.4); 
+	transform: rotateX(-75deg);
+	background-image: url("http://www.independent-software.com/wp-content/uploads/2016/09/sun.png");
+	font-size: 24em;
+}
+
+
+.planet {
+	background-color: #202020;
+	background-repeat: no-repeat;
+	background-size: cover;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPBAMAAADJ+Ih5AAAABGdBTUEAALGPC/xhBQAAADBQTFRFqqWjubWzoZyZjoiFqqWiu7e1nZaToZyarqmnAAAAq6Wi2tXSurSxy8bCxL670czJ3zIDEAAAAAp0Uk5TclBQUOvj+xCAAOCI6hkAAACSSURBVAjXAYcAeP8AmZeEbeWHmZAAmTSq7M2kKZAAk2rN7O7M4ZAAdKzf7f/s/nAAjt2+u7/f/YAAXf/7u/3vzlAA6uv/u97d/aAAasv+/93+3GAAz+//3t3+ymAAWr3f/93+7lAAjOzrv73f3oAAdKzLv/3t5XAAk6rM/87qopAAmTbOzOzGKZAAmZeErsWHmZDnbFcFNI0NnwAAAABJRU5ErkJggg==);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 1em;
+	height: 1em;
+	margin-top: -0.5em;
+	margin-left: -0.5em;
+	border-radius: 50%;
+	transform-style: preserve-3d;
+	animation-name: shadow-mercury;
+	animation-duration: 2.89016s; 
+}
+
+.orbit {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
+	width: 12em;
+	height: 12em;
+	margin-top: -6em;
+	margin-left: -6em; 
+	animation-name: orbit;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear; 
+	transform-style: preserve-3d;
+}
+
+
+.pos {
+	left: 50%;
+	top: -1px; 
+	position: absolute;
+	transform-style: preserve-3d;
+	animation-name: invert;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-duration: 2.89016s;
+}
+
+
+#mercury {
+	font-size: 4em;
+	animation-duration: 2.89016s;
+}
+
+
+@keyframes orbit {
+	0%   { transform: rotateZ(0deg); }
+	100% { transform: rotateZ(-360deg); } 
+}
+
+@keyframes invert {
+	0%   { transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg); }
+	100% { transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg); } 
+}
+
+@keyframes shadow-mercury {
+	0% {
+		box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+		/* TOP */ }
+
+	25% {
+		box-shadow: inset 16px 0 8px rgba(0, 0, 0, 0.5);
+		/* LEFT */ }
+
+	50% {
+		box-shadow: inset 40px -20px 16px rgba(0, 0, 0, 0.5);
+		/* BOTTOM */ }
+
+	50.01% {
+		box-shadow: inset -40px -20px 16px rgba(0, 0, 0, 0.5);
+		/* BOTTOM */ }
+
+	75% {
+		box-shadow: inset -16px 0 8px rgba(0, 0, 0, 0.5);
+		/* RIGHT */ }
+
+	100% {
+		box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+		/* TOP */ }    
+}
+
+
+
+
